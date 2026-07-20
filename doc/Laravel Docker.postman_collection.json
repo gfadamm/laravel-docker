@@ -1,0 +1,343 @@
+{
+  "info": {
+    "_postman_id": "e48a10d0-fe15-4836-abf0-4b9ff9320dfd",
+    "name": "Laravel Docker",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "3557788"
+  },
+  "item": [
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get Products",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}products",
+              "host": [
+                "{{base_url}}products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Products",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Acuk",
+                  "type": "text",
+                  "uuid": "bbf0ed49-2df4-4f1e-a954-09b5e70f707a"
+                },
+                {
+                  "key": "price",
+                  "value": "100",
+                  "type": "text",
+                  "uuid": "53023493-f808-4c0f-83d9-715db48d229e"
+                },
+                {
+                  "key": "description",
+                  "value": "lorem ipsum",
+                  "type": "text",
+                  "uuid": "4d3ee725-1f0a-456b-838d-dcf5bde7fcdc"
+                },
+                {
+                  "key": "category",
+                  "value": "Clothes",
+                  "type": "text",
+                  "uuid": "79faff07-e578-4f79-81cf-96538ebfd231"
+                },
+                {
+                  "key": "images[]",
+                  "type": "file",
+                  "uuid": "6e50cc68-7cb0-453d-b09a-778a4d23f878",
+                  "src": "/Users/gfadamm/Documents/SAMPLE ASSETS/PHOTOS/Foods/Abuba-Steak.webp"
+                },
+                {
+                  "key": "images[]",
+                  "type": "file",
+                  "uuid": "eeeaf2fa-4fac-4acc-9d06-ecb91700b074",
+                  "src": "/Users/gfadamm/Documents/SAMPLE ASSETS/PHOTOS/Foods/bbeeca0f-bdd3-4b05-af82-8011730c932b.jpeg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}products",
+              "host": [
+                "{{base_url}}products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "View Product",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}products/1",
+              "host": [
+                "{{base_url}}products"
+              ],
+              "path": [
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}products/1",
+              "host": [
+                "{{base_url}}products"
+              ],
+              "path": [
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Acuk Update",
+                  "type": "text",
+                  "uuid": "74fec416-7f4d-449e-9ad1-13c3e29aefd7"
+                },
+                {
+                  "key": "price",
+                  "value": "100",
+                  "type": "text",
+                  "uuid": "ae505a62-d6bc-4c48-853d-362cde27caa3"
+                },
+                {
+                  "key": "images",
+                  "type": "file",
+                  "uuid": "4c829a22-0ada-4a1a-ba1e-3c3c0cd893d8",
+                  "src": "/Users/gfadamm/Documents/SAMPLE ASSETS/PHOTOS/Foods/044434800_1552542526-shutterstock_1146053225.jpeg",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}products/13",
+              "host": [
+                "{{base_url}}products"
+              ],
+              "path": [
+                "13"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\" : \"jean Dee\",\n    \"username\" : \"jean\",\n    \"email\" : \"jean@email.com\",\n    \"password\": \"supersecret\",\n    \"password_confirmation\": \"supersecret\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}auth/register",
+          "host": [
+            "{{base_url}}auth"
+          ],
+          "path": [
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\" : \"john\",\n    \"password\": \"supersecret\",\n    \"password_confirmation\": \"supersecret\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}auth/login",
+          "host": [
+            "{{base_url}}auth"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Refresh Token",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"refresh_token\":\"{{refresh_token}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}auth/refresh-token",
+          "host": [
+            "{{base_url}}auth"
+          ],
+          "path": [
+            "refresh-token"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "refresh_token",
+      "value": ""
+    }
+  ]
+}
