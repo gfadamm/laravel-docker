@@ -22,12 +22,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        RateLimiter::for('api', function (Request $request) {
-
-        return Limit::perMinute(3)
-
+        RateLimiter::for('auth', function (Request $request) {
+            return Limit::perMinute(3)
                 ->by($request->ip());
+        });
 
+        RateLimiter::for('products', function (Request $request) {
+            return Limit::perSecond(1)
+                ->by($request->ip());
         });
     }
 }

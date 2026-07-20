@@ -132,5 +132,6 @@ return [
     */
 
     'serializable_classes' => false,
+    'limiter' => 'redis'
 
 ];
