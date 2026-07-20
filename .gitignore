@@ -1,0 +1,40 @@
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# IDE
+# ==========================
+.idea/
+.vscode/
+
+# ==========================
+# Environment
+# ==========================
+.env
+.env.local
+.env.*.local
+
+# ==========================
+# Docker
+# ==========================
+docker/mysql/data/
+docker/redis/data/
+docker/postgres/data/
+
+# Docker override (local only)
+compose.override.yml
+compose.local.yml
+
+# ==========================
+# Logs
+# ==========================
+*.log
+
+# ==========================
+# Temporary
+# ==========================
+tmp/
+.cache/
